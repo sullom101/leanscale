@@ -1,0 +1,56 @@
+.cahnnelWrapper {
+  display: grid;
+  grid-template-columns: 58px auto;
+  margin-bottom: 12px;
+  &:nth-child(2) {
+    margin-bottom: 11px;
+  }
+}
+.imageWrapper {
+  height: 48px;
+  .image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+.channelInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  .channelname {
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.34px;
+    color: #ffffff;
+    margin-top: 7px;
+  }
+  .channelUsers {
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.29px;
+    color: #6f747e;
+  }
+}
+.addFriendWrapper {
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 100%;
+  .addFriendsvg {
+    background-image: url("/icons/icn-add.svg");
+    width: 26px;
+    height: 24px;
+  }
+}
+.followWrapper {
+  display: grid;
+  grid-template-columns: 58px 133px auto;
+  margin-bottom: 12px;
+}
