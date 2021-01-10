@@ -2,10 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./games-hub.module.scss";
 import Button from "../Button/Button";
-import ChannelList from "../ChannelList/ChannelList";
-import FollowList from "../FollowList/FollowList";
-import PostList from "../PostList/PostList";
+import Comment from "../Comment/Comment";
+import FollowCard from "../FollowCard/FollowCard";
+
 const GamesHub = (props) => {
+  const somdata = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  const call = [0, 1, 2];
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.container}>
@@ -17,9 +19,28 @@ const GamesHub = (props) => {
           <Button className={styles.buttonStyle}>Discover All</Button>
         </div>
         <div className={styles.hubWrapper}>
-          <PostList />
-          <ChannelList />
-          <FollowList />
+          <div className={styles.postWrapper}>
+            <h3 className={styles.title}>Latest posts</h3>
+            {call.map((el, index) => (
+              <Comment className={styles.commentWrapper} key={`comment-${index}`} />
+            ))}
+          </div>
+          <div className={`${styles.wrapper} ${styles.channelWrapper}`}>
+            <h3 className={styles.title}>Channels</h3>
+            {somdata.map((el, index) => (
+              <Button link key={`channel-${index}`}>
+                <FollowCard channel />
+              </Button>
+            ))}
+            <Button className={styles.button}> Find More</Button>
+          </div>
+          <div className={styles.wrapper}>
+            <h3 className={styles.title}>Who to follow?</h3>
+            {somdata.map((el, index) => (
+              <FollowCard key={`follow-${index}`} />
+            ))}
+            <Button className={styles.button}> Discover All</Button>
+          </div>
         </div>
       </div>
     </section>
