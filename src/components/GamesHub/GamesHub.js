@@ -4,6 +4,7 @@ import styles from "./games-hub.module.scss";
 import Button from "../Button/Button";
 import Comment from "../Comment/Comment";
 import FollowCard from "../FollowCard/FollowCard";
+import SectionHeading from "../SectionHeading/SectionHeading";
 
 const GamesHub = (props) => {
   const somdata = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -11,13 +12,14 @@ const GamesHub = (props) => {
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.container}>
-        <div className={styles.titleWrapper}>
-          <h2 className={styles.title}>Games Hub</h2>
-          <p className={styles.subTitle}>
-            The best offers, new games, AAA titles and high-quality video games..
-          </p>
-          <Button className={styles.buttonStyle}>Discover All</Button>
-        </div>
+        <SectionHeading
+          title="Games Hub"
+          subTitle="The best offers, new games, AAA titles and high-quality video games.."
+          buttonTitle="Discover All"
+          titleStyle={styles.titleStyle}
+          subTitleStyle={styles.subTitleStyle}
+          buttonStyle={styles.headingButton}
+        />
         <div className={styles.hubWrapper}>
           <div className={styles.postWrapper}>
             <h3 className={styles.title}>Latest posts</h3>
@@ -39,7 +41,7 @@ const GamesHub = (props) => {
             {somdata.map((el, index) => (
               <FollowCard key={`follow-${index}`} />
             ))}
-            <Button className={styles.button}> Discover All</Button>
+            <Button className={styles.button}>Discover All</Button>
           </div>
         </div>
       </div>

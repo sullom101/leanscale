@@ -6,7 +6,17 @@
   justify-content: center;
   .container {
     width: 1045px;
+    margin-bottom: 20px;
 
+    .titleStyle {
+      color: #f7b500;
+    }
+    .subTitleStyle {
+      margin-left: 40px;
+    }
+    .headingButton {
+      margin: 0 0px 0px 342px;
+    }
     .titleWrapper {
       display: -webkit-flex;
       display: -moz-box;
