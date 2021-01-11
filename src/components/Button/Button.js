@@ -25,7 +25,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   link: PropTypes.bool,
   href: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 Button.defaultProps = {
