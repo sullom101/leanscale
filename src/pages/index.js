@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 import Slider from "../components/Slider/Slider";
 import GamesHub from "../components/GamesHub/GamesHub";
+import UpcomingGames from "../components/UpcomingGames/UpcomingGames";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navigation />
       <Slider />
       <GamesHub />
+      <UpcomingGames />
     </div>
   );
 }
