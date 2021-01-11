@@ -19,6 +19,7 @@ const GamesHub = (props) => {
           titleStyle={styles.titleStyle}
           subTitleStyle={styles.subTitleStyle}
           buttonStyle={styles.headingButton}
+          wrapperStyle={styles.headingWrapper}
         />
         <div className={styles.hubWrapper}>
           <div className={styles.postWrapper}>
