@@ -88,10 +88,11 @@
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
-      line-height: 1.38;
+      line-height: 1.44;
       letter-spacing: normal;
       color: #f2f2f2;
       padding-top: 11px;
+      white-space: pre-line;
     }
     .spanStyle {
       color: #0091ff;
@@ -99,7 +100,7 @@
     }
   }
   .commentFooter {
-    height: 56px;
+    height: 46px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
