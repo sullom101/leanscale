@@ -9,10 +9,10 @@ const SectionHeading = ({
   titleStyle,
   subTitleStyle,
   buttonStyle,
-  className
+  wrapperStyle
 }) => {
   return (
-    <div className={`${styles.titleWrapper} ${className}`}>
+    <div className={`${styles.titleWrapper} ${wrapperStyle}`}>
       <h2 className={`${styles.title} ${titleStyle}`}>{title}</h2>
       <p className={`${styles.subTitle} ${subTitleStyle}`}>{subTitle}</p>
       <Button className={`${styles.buttonStyle} ${buttonStyle}`}>{buttonTitle}</Button>
@@ -27,7 +27,7 @@ SectionHeading.propTypes = {
   titleStyle: PropTypes.string,
   subTitleStyle: PropTypes.string,
   buttonStyle: PropTypes.string,
-  className: PropTypes.string
+  wrapperStyle: PropTypes.string
 };
 
 SectionHeading.defaultProps = {
@@ -37,7 +37,7 @@ SectionHeading.defaultProps = {
   titleStyle: "",
   subTitleStyle: "",
   buttonStyle: "",
-  className: ""
+  wrapperStyle: ""
 };
 
 export default SectionHeading;
