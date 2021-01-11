@@ -1,0 +1,98 @@
+.gameCard {
+  .imageWrapper {
+    position: relative;
+    .image {
+      border-radius: 12px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.81);
+      // background-color: #ffffff;
+      width: 192px;
+      height: 257px;
+    }
+    .LikeButton {
+      background-color: transparent;
+      object-fit: contain;
+      background-image: url(/icons/icn-heart.svg);
+      width: 26px;
+      height: 26px;
+      border: 0;
+      padding: 4px;
+      position: absolute;
+      background-repeat: no-repeat;
+      right: 14px;
+      top: 13px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .gameInfo {
+    .gametitle {
+      width: 199px;
+      height: 36px;
+      margin: 8px 0 11px;
+      font-family: Rubik;
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.29;
+      letter-spacing: -0.22px;
+      color: #ffffff;
+    }
+    .priceLabel {
+      .discountedPrice {
+        .discountedPriceLabel {
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          color: rgba(235, 235, 245, 0.6);
+        }
+      }
+      .priceTag {
+        .priceLabel {
+          font-family: Rubik;
+          font-size: 13px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.48;
+          letter-spacing: normal;
+          color: rgba(235, 235, 245, 0.4);
+          margin-right: 6px;
+        }
+        .discount {
+          font-family: Rubik;
+          font-size: 13px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.48;
+          letter-spacing: -0.9px;
+          color: #a335ef;
+        }
+      }
+    }
+  }
+  .cardButton {
+    width: 166px;
+    height: 36px;
+    border: 0;
+    padding: 10px 48px;
+    border-radius: 3px;
+    background-color: #0a84ff;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+}
