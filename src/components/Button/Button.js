@@ -25,11 +25,11 @@ Button.propTypes = {
   onClick: PropTypes.func,
   link: PropTypes.bool,
   href: PropTypes.string,
-  children: PropTypes.string
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
 };
 
 Button.defaultProps = {
-  className: "container",
+  className: "",
   onClick: () => {},
   link: false,
   href: "/",
