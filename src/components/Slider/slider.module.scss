@@ -1,5 +1,139 @@
 .sectionWrapper {
-  height: 480px;
-  width: 100%;
-  background-color: rgb(56, 56, 56);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 43px 0 37px;
+  position: relative;
+  overflow: hidden;
+
+  .goLeft {
+    position: absolute;
+    top: 223px;
+    left: 188px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+    width: 69px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #c5d2e3;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: -0.22px;
+    text-align: center;
+    color: #c5d2e3;
+    background-color: transparent;
+  }
+  .goRight {
+    position: absolute;
+    top: 223px;
+    right: 190px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+    width: 69px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px #c5d2e3;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: -0.22px;
+    text-align: center;
+    color: #c5d2e3;
+    background-color: transparent;
+  }
+  .slideActive {
+    opacity: 1;
+    transition-duration: 1s;
+    transition: all 1s ease;
+    margin: 0 30px;
+  }
+  .slideLeft {
+    opacity: 0.24;
+    transition-duration: 1s;
+    position: relative;
+  }
+  .slideRight {
+    opacity: 0.24;
+    transition-duration: 1s;
+    /* transform: scale(1.08); */
+  }
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  .imageActive {
+    width: 770px;
+    height: 391px;
+    border-radius: 10px;
+    transition: all 1s ease;
+
+    // &::after {
+    //   content: "";
+    //   width: 756px;
+    //   height: 8px;
+    //   border-radius: 17.5px;
+    //   -webkit-filter: blur(4px);
+    //   filter: blur(4px);
+    //   background-image: linear-gradient(
+    //     to right,
+    //     rgba(28, 28, 30, 0),
+    //     rgba(0, 0, 0, 0.5) 37%,
+    //     rgba(0, 0, 0, 0.25) 72%,
+    //     rgba(28, 28, 30, 0)
+    //   );
+    // }
+  }
+  .imageLeft {
+    width: 770px;
+    height: 391px;
+    border-radius: 10px;
+    transform: scale(0.92) skew(0deg, 4deg) skewY(-4deg) translate3d(33px, 3px, 22px);
+  }
+  .imageRight {
+    /* width: 1000px;
+  height: 600px; */
+    width: 770px;
+    height: 391px;
+    border-radius: 10px;
+    transform: scale(0.92) skew(0deg, 4deg) skewY(-4deg) translate3d(-33px, 3px, 22px);
+  }
+  .dotWrapper {
+    position: absolute;
+    bottom: 60px;
+    .dotActive {
+      width: 8px;
+      height: 8px;
+      margin: 0 8px;
+      background-color: #ffffff;
+      border: 0;
+      border-radius: 50%;
+      padding: 0;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 8px;
+      opacity: 0.3;
+      background-color: #ffffff;
+      border: 0;
+      border-radius: 50%;
+      padding: 0;
+    }
+  }
 }
