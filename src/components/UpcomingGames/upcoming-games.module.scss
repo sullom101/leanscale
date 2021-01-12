@@ -20,19 +20,8 @@
       margin: 0 0px 0px 335px;
     }
     .headingWrapper {
-      display: -webkit-flex;
-      display: -moz-box;
-      display: flex;
-      -webkit-flex-direction: row;
-      -moz-box-orient: horizontal;
-      -moz-box-direction: normal;
-      flex-direction: row;
       padding-top: 20px;
       padding-bottom: 16px;
-      -webkit-align-items: center;
-      -moz-box-align: center;
-      align-items: center;
-      border-bottom: solid 1px #979797;
     }
 
     .cardsWrapper {
