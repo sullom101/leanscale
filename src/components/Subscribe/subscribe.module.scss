@@ -1,0 +1,87 @@
+.sectionWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #2e0f53;
+  height: 128px;
+  // height: 100vh;
+
+  .container {
+    width: 1045px;
+    padding: 45px 0 39px;
+    display: flex;
+    align-items: center;
+
+    .headerTitle {
+      font-family: Rubik;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 0.46px;
+      color: #f2f2f2;
+    }
+    .inputWrapper {
+      width: 440px;
+      height: 44px;
+      margin-left: 51px;
+      padding: 11px 18px;
+      border-radius: 6px;
+      background-color: #111113;
+      display: flex;
+      .label {
+        width: 100%;
+        position: relative;
+        display: flex;
+        .icon {
+          width: 28px;
+          height: 18px;
+          margin: 2px 12px 2px 0;
+          background-color: #4f4f53;
+          object-fit: contain;
+          background-image: url(/icons/icn-heart.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        .inputStyle {
+          width: 100%;
+          background-color: transparent;
+          border: 0;
+          opacity: 0.5;
+          font-family: SFProText;
+          font-size: 15px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.47;
+          letter-spacing: -0.36px;
+          color: rgba(235, 235, 245, 0.6);
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .buttonStyle {
+      width: 166px;
+      height: 44px;
+      margin: 0 0 0 27px;
+      padding: 14px 40px 14px 51px;
+      border: 0;
+      border-radius: 3px;
+      background-color: #0a84ff;
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: -0.4px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
