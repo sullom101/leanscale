@@ -118,6 +118,7 @@
         border: 0;
         background-image: url("/icons/repost.svg");
         background-color: transparent;
+        cursor: pointer;
       }
       .commentForward {
         width: 32px;
@@ -129,6 +130,7 @@
         border: 0;
         background-image: url("/icons/forward.svg");
         background-color: transparent;
+        cursor: pointer;
       }
       .commentAction {
         width: 32px;
@@ -140,6 +142,7 @@
         border: 0;
         background-image: url("/icons/clap.svg");
         background-color: transparent;
+        cursor: pointer;
       }
       .commentActionCounter {
         font-family: Rubik;
@@ -191,6 +194,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-color: transparent;
+        cursor: pointer;
       }
     }
   }
