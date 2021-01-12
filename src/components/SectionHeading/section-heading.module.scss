@@ -11,7 +11,7 @@
   -webkit-align-items: center;
   -moz-box-align: center;
   align-items: center;
-  border-bottom: solid 1px #979797;
+  border-bottom: solid 1px rgb(151 151 151 / 0.2);
 
   .title {
     font-family: Rubik;
@@ -37,7 +37,6 @@
   .buttonStyle {
     width: 97px;
     height: 30px;
-    padding: 7px 13px 7px 15px;
     border-radius: 5px;
     border: solid 1px #0a84ff;
     background: none;
