@@ -1,23 +1,44 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Header from "../components/Header/Header";
-import Navigation from "../components/Navigation/Navigation";
+import React from "react";
 import Slider from "../components/Slider/Slider";
 import GamesHub from "../components/GamesHub/GamesHub";
 import UpcomingGames from "../components/UpcomingGames/UpcomingGames";
+import Subscribe from "../components/Subscribe/Subscribe";
+import BasicLayout from "../components/BasicLayout";
+import PropTypes from "prop-types";
 
-export default function Home() {
+const Home = ({ footerMenu, sliderData, comments, channels, users, products }) => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      <Navigation />
-      <Slider />
-      <GamesHub />
-      <UpcomingGames />
-    </div>
+    <BasicLayout title="Home" description="something in this page" footerMenu={footerMenu}>
+      <Slider slider={sliderData} />
+      <GamesHub channel={channels} users={users} comments={comments} />
+      <UpcomingGames data={products} />
+      <Subscribe />
+    </BasicLayout>
   );
+};
+
+Home.propTypes = {
+  footerMenu: PropTypes.object,
+  sliderData: PropTypes.array,
+  comments: PropTypes.array,
+  channels: PropTypes.array,
+  users: PropTypes.array,
+  products: PropTypes.array
+};
+export default Home;
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.apiUrl}/data`);
+  const data = await res.json();
+  const { footerMenu, sliderData, comments, channels, users, products } = data;
+
+  return {
+    props: {
+      sliderData,
+      comments,
+      footerMenu,
+      channels,
+      users,
+      products
+    }
+  };
 }
