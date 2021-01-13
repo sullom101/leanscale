@@ -17,7 +17,7 @@ module.exports = (phase, { defaultConfig }) => {
   }
   return {
     ...defaultConfig,
-    target: "server",
+    target: "serverless",
     compress: true,
     cssModules: true,
     generateEtags: true,

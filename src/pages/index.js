@@ -25,7 +25,7 @@ Home.propTypes = {
   users: PropTypes.array,
   products: PropTypes.array
 };
-export default Home;
+
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.apiUrl}/data`);
   const data = await res.json();
@@ -42,3 +42,5 @@ export async function getServerSideProps() {
     }
   };
 }
+
+export default Home;
