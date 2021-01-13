@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./navigation.module.scss";
 import Link from "next/link";
 
-function Navigation(props) {
+const Navigation = () => {
   return (
     <div className={styles.navigationWrapper}>
       <nav className={styles.container}>
@@ -43,7 +42,7 @@ function Navigation(props) {
       </nav>
     </div>
   );
-}
+};
 
 Navigation.propTypes = {};
 
