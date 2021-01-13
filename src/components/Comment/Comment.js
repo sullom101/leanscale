@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "next/link";
 import styles from "./comment.module.scss";
 import ReadMore from "../ReadMore/ReadMore";
 import Button from "../Button/Button";
+import { kFormatter } from "../../utils/helpers";
 
 const Comment = ({
   name,
@@ -13,7 +13,8 @@ const Comment = ({
   followers,
   commentTime,
   likes,
-  comments
+  comments,
+  pro
 }) => {
   return (
     <div className={styles.commentWrapper}>
@@ -21,17 +22,16 @@ const Comment = ({
         <img src={userImage} alt="img-ico" className={styles.image} />
         <div className={styles.userWrapper}>
           <div className={styles.nameWrapper}>
-            <p className={styles.username}>{name}</p>
+            <p className={styles.username}>
+              <legend>{name}</legend>
+              {pro ? <span className={styles.pro}></span> : ""}
+            </p>
             <span className={styles.commentTime}>{commentTime}</span>
           </div>
           <div className={styles.slugWrapper}>
             <Button link className={styles.slug} href="/">
               {username}
             </Button>
-            {/* <Link href="/">
-              <a href="/" className={styles.slug}>
-              </a>
-            </Link> */}
             <span className={styles.followers}>{followers} Followers</span>
           </div>
         </div>
@@ -46,11 +46,15 @@ const Comment = ({
           <Button className={styles.commentRepost} />
           <Button className={styles.commentForward} />
           <Button className={styles.commentAction} />
-          <span className={styles.commentActionCounter}>{likes}</span>
+          {likes > 0 ? (
+            <span className={styles.commentActionCounter}>{kFormatter(likes)}</span>
+          ) : (
+            ""
+          )}
         </div>
         <div className={styles.commentReplyWrapper}>
           {comments > 0 ? (
-            <span className={styles.commentCounter}>{comments} Comments</span>
+            <span className={styles.commentCounter}>{kFormatter(comments)} Comments</span>
           ) : (
             <span className={styles.noComments}>Add your comment</span>
           )}
@@ -69,7 +73,8 @@ Comment.propTypes = {
   followers: PropTypes.number,
   commentTime: PropTypes.string,
   likes: PropTypes.number,
-  comments: PropTypes.number
+  comments: PropTypes.number,
+  pro: PropTypes.bool
 };
 Comment.defaultProps = {
   userImage: "/images/user-ico.png",
@@ -80,7 +85,8 @@ Comment.defaultProps = {
   followers: 15,
   commentTime: "3hrs ago",
   likes: 296,
-  comments: 15
+  comments: 15,
+  pro: false
 };
 
 export default Comment;

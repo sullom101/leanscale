@@ -1,13 +1,11 @@
 .commentWrapper {
   width: 482px;
-  // height: 208px;
   padding: 15px 15px 13px 16px;
   border-radius: 10px;
   background-color: #27272c;
   margin-bottom: 15px;
 
   .commentHeader {
-    // height: 48px;
     display: grid;
     grid-template-columns: 64px auto;
     grid-template-rows: 50px;
@@ -32,6 +30,17 @@
           line-height: 1.33;
           letter-spacing: 0.3px;
           color: #ffffff;
+          display: flex;
+          align-items: center;
+
+          .pro {
+            width: 28px;
+            height: 13px;
+            margin-left: 5px;
+            border: 0;
+            background-image: url("/icons/pro-tag.svg");
+            background-color: transparent;
+          }
         }
 
         .commentTime {
@@ -62,8 +71,6 @@
           margin-top: 1px;
         }
         .followers {
-          //         width: 74px;
-          // height: 16px;
           font-family: Rubik;
           font-size: 12px;
           font-weight: normal;
@@ -80,9 +87,6 @@
   }
   .commentBody {
     .comment {
-      // width: 450px;
-      // height: 74px;
-      // margin: 11px 1px 15px 0;
       font-family: Rubik;
       font-size: 13px;
       font-weight: normal;
@@ -114,7 +118,6 @@
         margin: 0 11px 0 0;
         opacity: 0.5;
         border-radius: 7px;
-        // border: solid 1.5px #646971;
         border: 0;
         background-image: url("/icons/repost.svg");
         background-color: transparent;
@@ -126,7 +129,6 @@
         margin: 0 11px 0 0;
         opacity: 0.5;
         border-radius: 7px;
-        // border: solid 1.5px #646971;
         border: 0;
         background-image: url("/icons/forward.svg");
         background-color: transparent;
@@ -138,7 +140,6 @@
         margin: 0 11px 0 0;
         opacity: 0.5;
         border-radius: 7px;
-        // border: solid 1.5px #646971;
         border: 0;
         background-image: url("/icons/clap.svg");
         background-color: transparent;
@@ -172,9 +173,6 @@
         margin-right: 10px;
       }
       .noComments {
-        // width: 109px;
-        // height: 16px;
-        // margin: 7px 9px 7px 206px;
         font-family: Rubik;
         font-size: 12px;
         font-weight: normal;
