@@ -22,12 +22,9 @@ const GameCard = ({ title, price, prePrice, currency, buttonText, discount, imgL
           </div>
           <div className={styles.priceTag}>
             <strike className={styles.priceLabel}>
-              <small>
-                {currency}
-                {prePrice}
-              </small>
+              <small>{discount > 0 ? `${currency} ${prePrice}` : " "}</small>
             </strike>
-            {discount > 0 ? <small className={styles.discount}>{discount}% OFF</small> : ""}
+            <small className={styles.discount}>{discount > 0 ? `${discount}% OFF` : " "}</small>
           </div>
         </div>
       </div>
