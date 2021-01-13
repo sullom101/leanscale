@@ -1,82 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./footer.module.scss";
-import Button from "../Button/Button";
 import FotterMenu from "../FooterMenu/FooterMenu";
 
-const menu = {
-  data: [
-    {
-      title: "LA3EB",
-      menu: [
-        {
-          name: "About Us",
-          route: "/"
-        },
-        {
-          name: "Careers",
-          route: "/"
-        },
-        {
-          name: "Newsroom",
-          route: "/"
-        },
-        {
-          name: "Contact",
-          route: "/"
-        }
-      ]
-    },
-    {
-      title: "HELP",
-      menu: [
-        {
-          name: "Support Hub",
-          route: "/"
-        },
-        {
-          name: "How to activate Games",
-          route: "/"
-        },
-        {
-          name: "Terms & Conditions",
-          route: "/"
-        },
-        {
-          name: "Privacy & Cookies",
-          route: "/"
-        },
-        {
-          name: "Returns & Refunds",
-          route: "/"
-        }
-      ]
-    },
-    {
-      title: "BUSINESS",
-      menu: [
-        {
-          name: "Business Center",
-          route: "/"
-        },
-        {
-          name: "Selling on  La3eb",
-          route: "/"
-        },
-        {
-          name: "Developer & Publisher",
-          route: "/"
-        },
-        {
-          name: "Marketing Partnership",
-          route: "/"
-        }
-      ]
-    }
-  ]
-};
-const Footer = (props) => {
-  console.log(menu.data);
+const Footer = ({ menu }) => {
   const { data } = menu;
   return (
     <footer className={styles.footerWrapper}>
@@ -131,6 +58,8 @@ const Footer = (props) => {
   );
 };
 
-Footer.propTypes = {};
+Footer.propTypes = {
+  menu: PropTypes.object
+};
 
 export default Footer;
