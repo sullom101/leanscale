@@ -1,9 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 import styles from "./header.module.scss";
-import Search from "../Search/Search";
+import Search from "../InputLabel/InputLabel";
+import Button from "../Button/Button";
 
 const Header = (props) => {
+  const [search, setSearch] = useState("");
   return (
     <header className={styles.headerWrapper}>
       <div className={styles.navigationWrapper}>
@@ -14,17 +15,19 @@ const Header = (props) => {
           inputStyle={styles.inputItem}
           placeholder="Search games, gears, accessories.."
           iconStyle={styles.searchIcon}
+          value={search}
+          onChange={(val) => setSearch(val.target.value)}
         />
         <div className={styles.iconListWrapper}>
           <div className={styles.iconListItems}>
             <div className={styles.iconListitem}>
               <div className={styles.iconWrapper}>
-                <span className={styles.icon} />
+                <Button link className={styles.icon} />
               </div>
             </div>
             <div className={styles.iconListitem}>
               <div className={styles.iconWrapper}>
-                <span className={styles.icon2} />
+                <Button link className={styles.icon2} />
               </div>
             </div>
           </div>
@@ -32,17 +35,17 @@ const Header = (props) => {
           <div className={styles.iconListItems}>
             <div className={styles.iconListitem}>
               <div className={styles.iconWrapper}>
-                <span className={styles.icon3} />
+                <Button link className={styles.icon3} />
               </div>
             </div>
             <div className={styles.iconListitem}>
               <div className={styles.iconWrapper}>
-                <span className={styles.icon2} />
+                <Button link className={styles.icon5} />
               </div>
             </div>
             <div className={styles.iconListitem}>
               <div className={styles.iconWrapper}>
-                <span className={styles.icon4} />
+                <Button link className={styles.icon4} />
               </div>
             </div>
           </div>
