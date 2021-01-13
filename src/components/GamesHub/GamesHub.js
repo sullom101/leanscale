@@ -6,9 +6,7 @@ import Comment from "../Comment/Comment";
 import FollowCard from "../FollowCard/FollowCard";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
-const GamesHub = (props) => {
-  const somdata = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-  const call = [0, 1, 2];
+const GamesHub = ({ users, channel, comments }) => {
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.container}>
@@ -24,23 +22,45 @@ const GamesHub = (props) => {
         <div className={styles.hubWrapper}>
           <div className={styles.postWrapper}>
             <h3 className={styles.title}>Latest posts</h3>
-            {call.map((el, index) => (
-              <Comment className={styles.commentWrapper} key={`comment-${index}`} />
+            {comments.map((el, index) => (
+              <Comment
+                className={styles.commentWrapper}
+                key={`comment-${index}`}
+                name={el.name}
+                userImage={el.userImage}
+                username={el.username}
+                commentText={el.commentText}
+                followers={el.followers}
+                commentTime={el.commentTime}
+                likes={el.likes}
+                pro={el.pro}
+                comments={el.comments}
+              />
             ))}
           </div>
           <div className={`${styles.wrapper} ${styles.channelWrapper}`}>
             <h3 className={styles.title}>Channels</h3>
-            {somdata.map((el, index) => (
+            {channel.map((el, index) => (
               <Button link key={`channel-${index}`}>
-                <FollowCard channel />
+                <FollowCard
+                  channel
+                  slug={el.slug}
+                  subscribers={el.subscribers}
+                  imageLink={el.imageLink}
+                />
               </Button>
             ))}
             <Button className={styles.button}> Find More</Button>
           </div>
           <div className={styles.wrapper}>
             <h3 className={styles.title}>Who to follow?</h3>
-            {somdata.map((el, index) => (
-              <FollowCard key={`follow-${index}`} />
+            {users.map((el, index) => (
+              <FollowCard
+                key={`follow-${index}`}
+                slug={el.slug}
+                followers={el.followers}
+                imageLink={el.imageLink}
+              />
             ))}
             <Button className={styles.button}>Discover All</Button>
           </div>
@@ -50,6 +70,10 @@ const GamesHub = (props) => {
   );
 };
 
-GamesHub.propTypes = {};
+GamesHub.propTypes = {
+  channel: PropTypes.arrayOf(PropTypes.object),
+  users: PropTypes.arrayOf(PropTypes.object),
+  comments: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default GamesHub;
