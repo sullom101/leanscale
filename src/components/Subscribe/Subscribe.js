@@ -1,25 +1,28 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 import styles from "./subscribe.module.scss";
 import Button from "../Button/Button";
+import InputLabel from "../InputLabel/InputLabel";
 
-const Subscribe = (props) => {
+const Subscribe = () => {
+  const [email, setEmail] = useState("");
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.container}>
         <h4 className={styles.headerTitle}>Get your best games deals first</h4>
-        <div className={styles.inputWrapper}>
-          <label className={styles.label}>
-            <span className={styles.icon} />
-            <input className={styles.inputStyle} placeholder="Enter your email" type="email" />
-          </label>
-        </div>
+        <InputLabel
+          searchWrapper={styles.inputWrapper}
+          labelStyle={styles.label}
+          inputStyle={styles.inputStyle}
+          placeholder="Enter your email"
+          type="email"
+          iconStyle={styles.icon}
+          value={email}
+          onChange={(val) => setEmail(val.target.value)}
+        />
         <Button className={styles.buttonStyle}>Subscribe</Button>
       </div>
     </section>
   );
 };
-
-Subscribe.propTypes = {};
 
 export default Subscribe;
