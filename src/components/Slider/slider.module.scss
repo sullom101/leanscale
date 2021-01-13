@@ -71,7 +71,6 @@
   .slideRight {
     opacity: 0.24;
     transition-duration: 1s;
-    /* transform: scale(1.08); */
   }
   .slide {
     opacity: 0;
@@ -82,22 +81,6 @@
     height: 391px;
     border-radius: 10px;
     transition: all 1s ease;
-
-    // &::after {
-    //   content: "";
-    //   width: 756px;
-    //   height: 8px;
-    //   border-radius: 17.5px;
-    //   -webkit-filter: blur(4px);
-    //   filter: blur(4px);
-    //   background-image: linear-gradient(
-    //     to right,
-    //     rgba(28, 28, 30, 0),
-    //     rgba(0, 0, 0, 0.5) 37%,
-    //     rgba(0, 0, 0, 0.25) 72%,
-    //     rgba(28, 28, 30, 0)
-    //   );
-    // }
   }
   .imageLeft {
     width: 770px;
@@ -106,8 +89,6 @@
     transform: scale(0.92) skew(0deg, 4deg) skewY(-4deg) translate3d(33px, 3px, 22px);
   }
   .imageRight {
-    /* width: 1000px;
-  height: 600px; */
     width: 770px;
     height: 391px;
     border-radius: 10px;

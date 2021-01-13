@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./slider.module.scss";
-import { SliderData } from "./SliderData";
 import Button from "../Button/Button";
 
 const Slider = ({ slider }) => {
@@ -28,7 +27,7 @@ const Slider = ({ slider }) => {
       <Button className={styles.goRight} onClick={nextSlide}>
         NEXT
       </Button>
-      {SliderData.map((item, index) => {
+      {slider.map((item, index) => {
         return (
           <React.Fragment key={index}>
             <div className={index === current ? styles.slideLeft : styles.slide}>
@@ -58,10 +57,16 @@ const Slider = ({ slider }) => {
 };
 
 Slider.propTypes = {
-  slider: PropTypes.arrayOf([PropTypes.shape({ title: PropTypes.string, image: PropTypes.string })])
+  slider: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      image: PropTypes.string
+    })
+  )
 };
+
 Slider.defaultProps = {
-  slider: SliderData
+  slider: []
 };
 
 export default Slider;
