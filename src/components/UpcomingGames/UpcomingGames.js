@@ -5,7 +5,7 @@ import styles from "./upcoming-games.module.scss";
 import Button from "../Button/Button";
 import GameCard from "../GameCard/GameCard";
 
-const UpcomingGames = (props) => {
+const UpcomingGames = ({ data }) => {
   return (
     <section className={styles.sectionWrapper}>
       <div className={styles.container}>
@@ -19,11 +19,17 @@ const UpcomingGames = (props) => {
           wrapperStyle={styles.headingWrapper}
         />
         <div className={styles.cardsWrapper}>
-          <GameCard />
-          <GameCard />
-          <GameCard />
-          <GameCard />
-          <GameCard />
+          {data.map((item, index) => (
+            <GameCard
+              title={item.title}
+              price={item.price}
+              currency={item.currency}
+              discount={item.discount}
+              prePrice={item.prePrice}
+              imgLink={item.imgLink}
+              key={`product-${index}`}
+            />
+          ))}
         </div>
         <div className={styles.buttonWrapper}>
           <Button className={styles.button}>LOAD MORE</Button>
@@ -33,6 +39,12 @@ const UpcomingGames = (props) => {
   );
 };
 
-UpcomingGames.propTypes = {};
+UpcomingGames.propTypes = {
+  data: PropTypes.array
+};
+
+UpcomingGames.defaultProps = {
+  data: []
+};
 
 export default UpcomingGames;
