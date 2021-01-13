@@ -23,7 +23,7 @@ const ReadMore = ({ children, max, className, spanStyle }) => {
       </p>
     );
   } else {
-    return <p>{children}</p>;
+    return <p className={className}>{children}</p>;
   }
 };
 
