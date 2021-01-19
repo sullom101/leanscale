@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 befor you run 
 change .env.example file to .env and run it locally 
 
-First, run the development server:
+then, run the development server:
 
 ```bash
 npm run dev
